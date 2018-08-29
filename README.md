@@ -1,8 +1,7 @@
-#Small sample made with React
+# Small sample made with React
+_**This is small sample of React App**_
 
-This is small sample of React App
-
-###Getting Started:
+### Getting Started:
 First you need to install all npm packages -> `npm i`. 
 
 After all packages will be installed run this -> `npm run start` 
