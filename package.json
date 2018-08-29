@@ -8,6 +8,11 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kofaka/Small_sample_made_with_React.git"
+  },
+  "author": "Daria Babakova",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
