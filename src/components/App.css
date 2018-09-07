@@ -26,3 +26,63 @@ a:active {
   color: #2b709c;
   outline: none;
 }
+
+.loader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 0;
+}
+
+.loader_hide {
+  display: none;
+}
+
+.loader::before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.loader::after {
+  display: block;
+  content: '';
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 15px ridge #37c3ff;
+  animation: 1s linear infinite pulsation;
+}
+
+@keyframes pulsation {
+  0% {
+    transform: rotate(0);
+    width: 0;
+    height: 0;
+    border-width: 5px;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    width: 50px;
+    height: 50px;
+    border-width: 15px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    width: 0;
+    height: 0;
+    border-width: 5px;
+  }
+}

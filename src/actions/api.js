@@ -1,23 +1,15 @@
-import axios from 'axios';
-import {getTabsInfo} from './actionCreators';
+import {API, GET_TABS_INFO} from './actionTypes';
 
 /**
  *
- * @param source {String}
- * @param dispatchedAction {Function}
- * @returns {Function}
+ * @param payload {Object}
  */
-export const callApi = (source, dispatchedAction) => {
-    return function (dispatch) {
-        return axios.get(source)
-            .then(
-                response => response.data,
-                error => console.log('An error occurred.', error),
-            )
-            .then(
-                data => dispatch(dispatchedAction(data))
-            )
-    }
-};
+export const callAPI = (payload) => ({
+    type: API,
+    payload
+});
 
-export const fetchTabsInfo = () => callApi('./tabs.json', getTabsInfo);
+export const getTabsInfo = () => callAPI({
+    url: './tabs.json',
+    ...GET_TABS_INFO,
+});
