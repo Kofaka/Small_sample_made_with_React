@@ -5,7 +5,6 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {syncHistoryWithStore} from 'react-router-redux';
 import {browserHistory} from 'react-router';
 
-import {getTabsInfo} from './actions/api';
 import apiMiddleware from './middlewares/api';
 import tabsMiddleware from './middlewares/tabs';
 import rootReducer from './reducers/index';
@@ -19,8 +18,6 @@ const enhancers = [middlewareEnhancer];
 const composedEnhancers = composeWithDevTools(...enhancers);
 
 const store = createStore(rootReducer, composedEnhancers);
-
-store.dispatch(getTabsInfo());
 
 export const history = syncHistoryWithStore(browserHistory, store);
 

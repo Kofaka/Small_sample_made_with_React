@@ -1,8 +1,8 @@
 import React from 'react';
 
-const DummyTable = () => (
+const DummyTable = ({data}) => (
     <section>
-        <h1>Dummy Table</h1>
+        <h1>{data.title}</h1>
         <table>
             <tbody>
             <tr>
