@@ -6,8 +6,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack-dev-server --mode production",
-    "build0": "webpack --mode production"
+    "build": "webpack-dev-server --mode production"
   },
   "repository": {
     "type": "git",
